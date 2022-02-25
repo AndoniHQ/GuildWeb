@@ -1,0 +1,131 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  margin-top: 50px;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 2em;
+  color: #dcdde1 !important;
+  transition: color 1s ease;
+}
+
+.scrolled .navbar-brand {
+  color: #262626 !important;
+}
+
+.navbar-custom {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 1s ease !important;
+}
+
+.navbar-custom.scrolled {
+  background-color: #dcdde1 !important;
+}
+
+.navbar-dark .navbar-brand {
+  color: #dcdde1;
+}
+
+.nav-item {
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: 10px;
+  transition: color 1s ease !important;
+}
+
+.scrolled .navbar-nav .nav-item .nav-link {
+  color: #262626;
+}
+
+.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+  background: #dcdde1;
+  color: #262626;
+  transition: color 1s ease !important;
+}
+
+.scrolled .navbar-nav .nav-item .nav-link:hover {
+  background: #262626;
+  color: #dcdde1;
+}
+
+#main {
+  position: relative;
+  background: url(/static/blog/img/Landing_page.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 220px 0 220px;
+}
+
+#main .row {
+  margin-top: 15%;
+}
+
+#main h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.6em;
+  color: #dcdde1;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+#main p {
+  margin-top: 1em;
+  padding: 0;
+  font-size: 1em;
+  color: #dcdde1;
+  text-align: center;
+}
+
+#main .btn {
+  background: #718093;
+  color: #f1f1f1;
+  border-radius: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.vertical-center {
+  position: absolute;
+  left: 50%;
+  -ms-transform: translatex(-50%);
+  transform: translatex(-50%);
+}
+
+#footer {
+  position: relative;
+  background: url(/static/blog/img/footer_page.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 220px 0 220px;
+}
+
+#footer .container {
+  margin-top: 15%;
+}
+
+#footer .card {
+  padding: 10px;
+  background-color: hsla(230, 9%, 87%, 0.801);
+  width: 25%;
+}
+
+#footer-text {
+  font-weight: 500;
+  font-size: 1.5em;
+  color: #dcdde1 !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3px;
+}

@@ -1,0 +1,91 @@
+
+
+class User(models.Model):
+
+    """
+    Clase referente a los datos de los usuarios
+    """
+    Name = models.CharField(
+        max_length=20, help_text="Introduce el nombre del usuario")
+
+    Master = 'GM'
+    Oficial = 'O'
+    Raider = 'R'
+    Member = 'M'
+    Initiated = 'I'
+    rank_choices = [
+        (Master, 'Guild Master'),
+        (Oficial, 'Oficial'),
+        (Raider, 'Raider'),
+        (Member, 'Miembro'),
+        (Initiated, 'Iniciado'),
+    ]
+    rank = models.CharField(
+        max_length=1,
+        choices=rank_choices,
+        default=Initiated,
+        help_text="Rango del usuario"
+    )
+
+    def __str__(self):
+        return self.Name
+
+
+class Character(models.Model):
+    """
+    Clase que define los personajes de los usuarios
+    """
+
+    Name = models.CharField(
+        max_length=20, help_text="Introduce el nombre del personaje")
+
+    warrior = 'Guerrero'
+    Paladin = 'Paladin'
+    Hunter = 'Cazador'
+    rogue = 'Picaro'
+    Priest = 'Sacerdote'
+    Shaman = 'Chaman'
+    Mage = 'Mago'
+    Warlock = 'Brujo'
+    Monk = 'Monje'
+    Druid = 'Druida'
+    DemonHunter = 'Cazador de demonios'
+    DeathKnight = 'Caballero de la muerte'
+    p_class_choices = [
+        (warrior, 'Guerrero'),
+        (Paladin, 'Paladin'),
+        (Hunter, 'Cazador'),
+        (rogue, 'Picaro'),
+        (Priest, 'Sacerdote'),
+        (Shaman, 'Chaman'),
+        (Mage, 'Mago'),
+        (Warlock, 'Brujo'),
+        (Monk, 'Monje'),
+        (Druid, 'Druida'),
+        (DemonHunter, 'Cazador de demonios'),
+        (DeathKnight, 'Caballero de la muerte'),
+    ]
+
+    dps = 'DPS'
+    tank = 'TANK'
+    heal = 'HEAL'
+    Class = models.CharField(
+        max_length=1,
+        choices=p_class_choices,
+        default=dps,
+        help_text="Seleccion de clase"
+    )
+    spec_choices = [
+        (dps, 'DPS'),
+        (tank, 'TANK'),
+        (heal, 'HEAL'),
+    ]
+    Rol = models.CharField(
+        max_length=1,
+        choices=spec_choices,
+        default=dps,
+        help_text="Especialización de clase"
+    )
+
+    def __str__(self):
+        return self.Name

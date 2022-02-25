@@ -1,0 +1,271 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block title %}
+    <title>Saurfang Legacy</title>
+    {% endblock %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BOOTSTRAP 4 -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <!-- SCROLL REVEAL-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- CSS -->
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}" />
+    {% endblock %}
+  </head>
+
+  <body>
+    <!--NAVIGATION-->
+    <nav class="navbar navbar-expand-lg navbar-custom navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand trigger" href="{% url 'index' %}"
+          ><img src="{% static 'blog/img/horde_logo.png' %}" alt="" width="40px">SAURFANG LEGACY</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#main">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#info">informacion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'members' %}">Miembros</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% block content %}
+
+    <!-- LANDING PAGE -->
+    <section id="main">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-6 my-auto">
+            <h2 class="landing-phrase">Lorem ipsum dolor sit.</h2>
+            <p class="landing-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+              inventore suscipit. Vitae illo numquam aspernatur quos doloribus a
+              ducimus, natus, expedita sequi, inventore labore error quod! Odio
+              numquam vitae eius!
+            </p>
+            <div class="vertical-center landing-button">
+              <a href="#info" class="btn btn-outline-secondary btn-lg"
+                >Read more</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <div id="info" class="container-fluid" style="padding-top: 60px"></div>
+
+    <section>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="header-content-left">
+              <img src="{% static 'blog/img/info1.jpg' %}" alt="" style="width: 100%" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="header-content-right">
+              <h1 class="display-4">Lore Ipsum dolor.</h1>
+              <p class="mt-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+                unde molestiae. Impedit iusto perspiciatis a voluptatem at?
+                Labore obcaecati, ab fugiat architecto pariatur corrupti
+                quibusdam blanditiis nesciunt, enim quod similique!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO ONE -->
+    <section id="info-one">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-md-6 my-auto">
+            <div class="info-left">
+              <h2>Lorem ipsum dolor sit.</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+                at temporibus quo magni aliquam impedit assumenda voluptas,
+                eligendi fuga tenetur ad consequuntur, omnis porro possimus
+                iure. Hic laudantium beatae aperiam.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-right">
+              <img src="{% static 'blog/img/info2.jpg' %}" style="width: 100%" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO TWO -->
+    <section id="info-two">
+      <div class="container">
+        <div class="row my-4">
+          <div class="col-md-6">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
+              nulla id ex, eius voluptatum ipsam earum voluptatibus, molestiae,
+              sed iure deleniti consectetur quam distinctio aut! Laudantium
+              aspernatur esse nam reiciendis?
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
+              cupiditate cum soluta culpa harum neque nulla natus voluptatum,
+              quam error illum, saepe iusto quaerat excepturi itaque distinctio
+              laudantium minus ipsam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER + CONTACT-->
+    <div id="contact" class="container-fluid" style="padding-top: 110px;"></div>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="row justify-content-center">
+          <p id="footer-text">Puedes contactar con nostros uniendote a nuestro servidor de Discord</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="card">
+            <a href="https://discord.gg/AV3VXkF"
+              ><img src="{% static 'blog/img/Discord_join.png' %}" alt="" style="width: 100%;"
+            /></a>
+          </div>
+      </div>
+    </footer>
+
+    {% endblock %}
+
+  </body>
+  <!-- JS, Popper.js, and jQuery -->
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- SCRIPTS -->
+  <script>
+    ScrollReveal().reveal(".navbar-custom", {
+      delay: 1000,
+      duration: 2000,
+      origin: "bottom",
+    });
+    ScrollReveal().reveal(".landing-phrase", {
+      delay: 1250,
+      duration: 2000,
+      origin: "bottom",
+    });
+    ScrollReveal().reveal(".landing-text", {
+      delay: 1500,
+      duration: 2000,
+      origin: "bottom",
+    });
+    ScrollReveal().reveal(".landing-button", {
+      delay: 1750,
+      duration: 2000,
+      origin: "bottom",
+    });
+    ScrollReveal().reveal(".header-content-left", {
+      duration: 1000,
+      delay: 1500,
+      origin: "top",
+      distance: "300px",
+    });
+    ScrollReveal().reveal(".header-content-right", {
+      duration: 1000,
+      delay: 1500,
+      origin: "right",
+      distance: "300px",
+    });
+    ScrollReveal().reveal(".info-left", {
+      duration: 1000,
+      delay: 2000,
+      origin: "left",
+      distance: "300px",
+      viewFactor: 0.2,
+    });
+    ScrollReveal().reveal(".info-right", {
+      duration: 1000,
+      delay: 2000,
+      origin: "right",
+      distance: "300px",
+      viewFactor: 0.2,
+    });
+    ScrollReveal().reveal("#info-two", {
+      duration: 1000,
+      delay: 2500,
+      origin: "bottom",
+    });
+    ScrollReveal().reveal("#footer-text", {
+      duration: 1000,
+      delay: 500,
+      origin: "bottom",
+    });
+    ScrollReveal().reveal(".card", {
+      duration: 1000,
+      delay: 2000,
+      origin: "bottom",
+    });
+    $(window).scroll(function () {
+      $("nav").addClass("scrolled", $(this).scrollTop() > 200);
+    });
+  </script>
+</html>

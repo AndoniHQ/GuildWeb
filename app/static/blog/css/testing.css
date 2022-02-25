@@ -1,0 +1,15 @@
+#home {
+  background: url(https://1.bp.blogspot.com/-O3lZ3OSH0q0/XYyiR0D-oDI/AAAAAAAAD0Q/NsYqRIVqQDI9KfBK-82d7yYBplkeEeipACLcBGAsYHQ/s1600/maxresdefault.jpg)
+    no-repeat center center fixed;
+  display: table;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+  background-size: cover;
+}
+
+.row {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
